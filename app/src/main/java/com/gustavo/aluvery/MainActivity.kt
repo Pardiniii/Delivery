@@ -145,12 +145,12 @@ fun ProductList() {
             ProductItem()
             ProductItem()
             ProductItem()
-            Spacer(Modifier)
+            Spacer(Modifier) //deixa um espaço nas extremidades porem sumindo com esse espaço quando usa o scroll
         }
     }
 }
 
-@Preview
+@Preview (showBackground = true)
 @Composable
 private fun ProductItemPreview() {
     ProductItem()

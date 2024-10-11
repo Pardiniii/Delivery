@@ -37,8 +37,12 @@ import coil.compose.AsyncImage
 import java.math.BigDecimal
 
 @Composable
-fun ProductItem(product: Product) {
+fun ProductItem(
+    product: Product,
+    modifier: Modifier = Modifier
+) {
     Surface(
+        modifier,
         shape = RoundedCornerShape(15.dp),
         elevation = 4.dp
     ) {
@@ -100,8 +104,9 @@ private fun ProductItemPreview() {
         Surface {
             ProductItem(
                 Product(
-                    name = LoremIpsum(50).values.first(),
+                    name = "Bolo de pote",
                     price = BigDecimal("14.99")
+                    //description = LoremIpsum(50).values.first()
                 )
             )
         }
